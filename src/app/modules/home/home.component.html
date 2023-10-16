@@ -1,0 +1,13 @@
+<div id="home_container" class="home">
+    <div id="home_header" class="home_header">
+        Movies
+    </div>
+    <div id="home_conteudo" class="home_conteudo">
+        <div class="inputContainer">
+            <input type="search" placeholder="Busque um filme por nome ou gênero..." (keyup)="buscaFilme()" [(ngModel)]="buscarKey">
+        </div>
+        <div *ngFor="let movie of moviesListFilter">
+            <app-movie-card [movie]="movie" (click)="goToMovieDetail(movie.id)" ></app-movie-card>
+        </div>
+    </div>
+</div>

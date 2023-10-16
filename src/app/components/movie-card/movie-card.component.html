@@ -1,0 +1,34 @@
+<div id="movieCard_container" class="movieCard">
+    <div id="movieCard_conteudo" class="movieCard_conteudo">
+        <div id="movieCard_movieImagem" class="imgContainer">
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+        </div>
+        <div id="movieCard_movieDescricao" class="descricaoContainer">
+            <div class="descricaoHeader">
+                <div class="circleVote">
+                    <div class="insideCircle">
+                        <span>
+                            {{movie.vote_average}}
+                        </span>
+                    </div>
+                </div>
+                <div class="movieTitle">
+                    <p>{{movie.title}}</p>
+                    <p>{{movie.release_date}}</p>
+                </div>
+            </div>
+            <div class="descricaoBody">
+                <div class="sinopse">
+                    {{movie.overview}}
+                </div>
+            </div>
+            <div class="listaGenero">
+                <div *ngFor="let genero of movie.genre_ids" class="generoItem">
+                    <p>
+                        {{genero}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

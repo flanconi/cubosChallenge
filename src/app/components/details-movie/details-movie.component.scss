@@ -1,0 +1,152 @@
+@import "../../../styles.scss";
+
+.detailMovie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    &_conteudo {
+        width: 90%;
+
+        .conteudoHeader {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            background-color: $cinza-background-title;
+            padding: 0 15px 0 35px;
+
+            :first-child {
+                color: $cor-background;
+                font-size: 2rem;
+            }
+
+            :last-child {
+                color: $cinza-medium;
+                font-size: 1.125rem;
+            }
+        }
+
+        .conteudoBody {
+            display: flex;
+            flex-direction: row;
+            background-color: $cinza-background-body;
+
+            .infoMovie {
+                padding: 20px 40px 0 50px;
+
+                .titleInfoPrincipal {
+                    width: 100%;
+                    display: block;
+                    font-size: 1.75rem;
+                    color: $cor-background;
+                    border-bottom: 4px solid $cor-text;
+                    padding: 4px;
+                }
+
+                .detailSinopse {
+                    width: 100%;
+                    margin-bottom: 25px;
+
+
+                    p {
+                        width: 100%;
+                        color: $cinza-hard;
+                        text-align: justify;
+                        margin-top: 20px;
+                    }
+                }
+
+                .infosGerail {
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                    .listaInfo {
+                        display: flex;
+                        flex-direction: row;
+
+                        div {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            margin: 25px 50px 0 15px;
+
+                            .itemInfo {
+                                font-size: 1.75rem;
+                                color: $cor-background;
+                            }
+
+                            p{
+                                color: $cinza-hard;
+                                font-size: 1.125rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottomInfo{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 50px;
+
+                .listaGenero{
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    top: 20px;
+                    padding: 0px 15px;
+                    .generoItem{
+                        padding: 5px 10px;
+                        margin-right: 10px;
+                        border: 1px solid $cor-background;
+                        background-color: white;
+                        border-radius: 20px;
+    
+                        p{
+                            color: $cor-background;
+                        }
+                    }
+                }
+
+                .circleVote{
+                    width: 150px;
+                    height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 5px solid $cor-background;
+                    border-radius: 150px;
+                    background-color: $cor-text;
+                    margin-right: 20px;
+
+                    .insideCircle{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 140px;
+                        height: 140px;
+                        border-radius: 140px;
+                        background-color: $cor-background;
+
+                        span{
+                            font-weight: 500;
+                            font-size: 2.5rem;
+                            color: $cor-text;
+                        }
+                    }
+                }
+
+            }
+
+            .imgContainer {
+                img {
+                    height: 100%;
+                    width: 350px;
+                }
+            }
+        }
+    }
+}

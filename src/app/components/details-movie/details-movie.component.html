@@ -1,0 +1,62 @@
+<div id="detailMovie_container" class="detailMovie">
+    <div id="detailMovie_conteudo" class="detailMovie_conteudo">
+        <div id="detailMovie_conteudoHeader" class="conteudoHeader">
+            <p>{{movie.title}}</p>
+            <p>{{movie.release_date}}</p>
+        </div>
+        <div id="detailMovie_conteudoBody" class="conteudoBody">
+            <div class="infoMovie">
+                <div class="detailSinopse">
+                    <span class="titleInfoPrincipal">Sinopse</span>
+                    <p>{{movie.overview}}</p>
+                </div>
+                <div class="infosGerail">
+                    <span class="titleInfoPrincipal">Informações</span>
+                    <div class="listaInfo">
+                        <div>
+                            <span class="itemInfo">Situação</span>
+                            <p>{{movie.status}}</p>
+                        </div>
+                        <div>
+                            <span class="itemInfo">Duração</span>
+                            <p>{{movie.runtime}}min</p>
+                        </div>
+                        <div>
+                            <span class="itemInfo">Orçamento</span>
+                            <p>${{movie.budget}}</p>
+                        </div>
+                        <div>
+                            <span class="itemInfo">Receita</span>
+                            <p>${{movie.revenue}}</p>
+                        </div>
+                        <div>
+                            <span class="itemInfo">Lucro</span>
+                            <p>${{movie.profit}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomInfo">
+                    <div>
+                        <div class="listaGenero">
+                            <div *ngFor="let genero of movie.genre_ids" class="generoItem">
+                                <p>
+                                    {{genero}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circleVote">
+                        <div class="insideCircle">
+                            <span>
+                                {{movie.vote_average}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgContainer">
+                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+            </div>
+        </div>
+    </div>
+</div>
