@@ -6,6 +6,7 @@ Objetivo do projeto visa criar uma interface para que seja possível filtrar os 
 
 Angular
 Typescript
+Scss
 
 # Como rodar o projeto
 
