@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     this.movieService.getMovies().subscribe({
       next: (res) => {
         res.results.map((x: MovieInfoModel) => {
-          let movieObject = new MovieInfo(x.id, x.title, x.overview, x.release_date, `${x.vote_average*100/10}%` , this.filterGeneros(x.genre_ids), x.poster_path);
+          let movieObject = new MovieInfo(x.id, x.title, x.overview, x.release_date.split('-').reverse().join('/'), `${(x.vote_average*100/10).toFixed(1)}%` , this.filterGeneros(x.genre_ids), x.poster_path);
           this.moviesList.push(movieObject);
         })
       }
