@@ -31,6 +31,16 @@ export class MovieService {
         );
     }
 
+    getMovieVideo(movieId: number) {
+        const paramsData = { language: 'pt-BR'};
+        const params = new HttpParams({ fromObject: paramsData });
+        const headers = new HttpHeaders({ Authorization: `Bearer ${this.apiKey}` });
+
+        return this.http.get<any>(
+            `${this.url}movie/${movieId}/videos`, { headers, params }
+        );
+    }
+
     getGenreList() {
         const paramsData = { language: 'pt-BR'};
         const params = new HttpParams({ fromObject: paramsData });

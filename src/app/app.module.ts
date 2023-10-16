@@ -11,7 +11,7 @@ import { MovieDetailModule } from './modules/movieDetail/movieDetail.module';
     BrowserModule,
     HomeModule,
     MovieDetailModule,
-    AppRoutingModule 
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,15 +23,15 @@
                         </div>
                         <div>
                             <span class="itemInfo">Orçamento</span>
-                            <p>${{movie.budget}}</p>
+                            <p>{{movie.budget | currency: '$'}}</p>
                         </div>
                         <div>
                             <span class="itemInfo">Receita</span>
-                            <p>${{movie.revenue}}</p>
+                            <p>{{movie.revenue | currency: '$'}}</p>
                         </div>
                         <div>
                             <span class="itemInfo">Lucro</span>
-                            <p>${{movie.profit}}</p>
+                            <p>{{movie.profit | currency: '$'}}</p>
                         </div>
                     </div>
                 </div>
